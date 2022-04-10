@@ -1,12 +1,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import {AuthProvider} from "@/lib/auth";
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import theme from '../styles/theme';
 import createEmotionCache from '../styles/createEmotionCache';
-
+import { SnackbarProvider } from 'notistack';
 // Client-side cache shared for the whole session
 // of the user in the browser.
 
@@ -18,10 +19,12 @@ export default function MyApp(props) {
 
 	return (
 		<CacheProvider value={emotionCache}>
+			<SnackbarProvider>
 			<Head>
 				<meta name="viewport"
 					content="initial-scale=1, width=device-width" />
 			</Head>
+			<AuthProvider>
 			<ThemeProvider theme={theme}>
 				
 				{/* CssBaseline kickstart an elegant,
@@ -29,8 +32,11 @@ export default function MyApp(props) {
 				build upon. */}
 				
 				<CssBaseline />
+        
 				<Component {...pageProps} />
 			</ThemeProvider>
+			</AuthProvider>
+			</SnackbarProvider>
 		</CacheProvider>
 	);
 }
