@@ -2,7 +2,7 @@ import React from 'react';
 import NextLink from 'next/link';
 import Button from '@mui/material/Button';
 
-const AcercaDe = () => {
+const About = () => {
   return (
     <>
       <div>acerca-de</div>
@@ -14,4 +14,4 @@ const AcercaDe = () => {
   )
 }
 
-export default AcercaDe
+export default About
