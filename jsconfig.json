@@ -3,9 +3,10 @@
       "baseUrl": ".",
       "paths": {
         "@/components/*": ["src/components/*"],
+        "@/constants/*": ["src/constants/*"],
+        "@/hocs/*": ["src/hocs/*"],
         "@/lib/*": ["src/lib/*"],
         "@/styles/*": ["src/styles/*"],
-        "@/hocs/*": ["src/hocs/*"]
       }
     }
   }
