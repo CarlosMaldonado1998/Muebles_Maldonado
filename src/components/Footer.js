@@ -79,7 +79,7 @@ const Footer = () => {
                 columns={{ xs: 4, sm: 8, md: 8 }}
               >
                 {AboutUs.map((index) => (
-                  <Grid item xs={4} sm={8} md={12} key={index}>
+                   <Grid item xs={4} sm={8} md={12} key={`about-${index.text}`}>
                     <Link href={index.to} passHref>
                       <MuiLink underline="hover" color="white">
                         {index.text}
@@ -101,7 +101,7 @@ const Footer = () => {
                 columns={{ xs: 4, sm: 8, md: 12 }}
               >
                 {Products.map((index) => (
-                  <Grid item xs={4} sm={8} md={12} key={index}>
+                  <Grid item xs={4} sm={8} md={12} key={`products-${index.text}`}>
                     <Link href={index.to} passHref>
                       <MuiLink underline="hover" color="white">
                         {index.text}

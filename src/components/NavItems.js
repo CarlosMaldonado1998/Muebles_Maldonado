@@ -33,7 +33,7 @@ const itemsNavigation = [
   },
   {
     text: "Catálogo",
-    to: Routes.ABOUT,
+    to: Routes.PRODUCTS,
     icon: <ListIcon color="primary" />,
   },
   {
@@ -84,8 +84,8 @@ const NavItems = ({ onHandleDrawerClose }) => {
       <Divider />
       <List>
         {itemsNavigation.map((text, index) => (
-          <Link href={text.to}>
-            <ListItem button key={text.text} onClick={onHandleDrawerClose}>
+          <Link href={text.to} key={`nav-item-${text.text}`}>
+            <ListItem button onClick={onHandleDrawerClose}>
               <ListItemIcon>{text.icon}</ListItemIcon>
               <ListItemText
                 primary={text.text}
