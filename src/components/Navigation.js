@@ -110,12 +110,8 @@ const Navigation = (props) => {
                     }}
                   >
                     {itemsNavigation.map((page) => (
-                      <Link href={page.to} passHref>
-                        <Button
-                          size={"large"}
-                          color="secondary"
-                          key={page.text}
-                        >
+                      <Link href={page.to} passHref key={`nav-${page.text}`}>
+                        <Button size={"large"} color="secondary">
                           {page.text}
                         </Button>
                       </Link>

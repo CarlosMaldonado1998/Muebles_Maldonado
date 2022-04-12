@@ -115,7 +115,7 @@
   line-height: 1.5;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
@@ -135,7 +135,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .grid {
     width: 100%;
     flex-direction: column;
