@@ -14,6 +14,8 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import LOGO from '../../public/Recurso1.png';
+import Image from "next/image";
 
 const AboutUs = [
   {
@@ -33,10 +35,10 @@ const AboutUs = [
 const Products = [
   {
     text: "Catálogo",
-    to: Routes.ABOUT,
+    to: Routes.PRODUCTS,
   },
   {
-    text: "Envios",
+    text: "Envíos",
     to: Routes.SHIPMENT,
   },
 ];
@@ -62,12 +64,14 @@ const Footer = () => {
           >
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <Grid container justifyContent="center">
-                <Typography color="white">Logo (Muebles Maldonado)</Typography>
+                <Image src={LOGO} width={140} height={110} />
               </Grid>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
               <Grid container justifyContent="center">
-                <Typography color="primary">Acerca de</Typography>
+                <Typography color="brown" variant="h6">
+                  Acerca de
+                </Typography>
               </Grid>
               <Grid
                 container
@@ -87,7 +91,9 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
               <Grid container justifyContent="center">
-                <Typography color={"primary"}>Productos</Typography>
+                <Typography color="brown" variant="h6">
+                  Productos
+                </Typography>
               </Grid>
               <Grid
                 container
@@ -107,7 +113,9 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
               <Grid container justifyContent="center">
-                <Typography color="primary">Redes Sociales</Typography>
+                <Typography color="brown" variant="h6">
+                  Redes Sociales
+                </Typography>
               </Grid>
 
               <Grid
@@ -117,25 +125,25 @@ const Footer = () => {
                 alignItems="flex-start"
               >
                 <IconImage
-                  href="https://www.facebook.com/ESFOT-EPN-UIO-163137570522102/"
+                  href="https://www.facebook.com/MueblesMaldonad"
                   target="_blank"
                 >
-                  <FacebookIcon color="terciary" />
+                  <FacebookIcon color="blue" />
                 </IconImage>
                 <IconImage
-                  href="https://www.facebook.com/ESFOT-EPN-UIO-163137570522102/"
+                  href="https://www.instagram.com/muebles_maldonad/"
                   target="_blank"
                 >
                   <InstagramIcon color="purple" />
                 </IconImage>
                 <IconImage
-                  href="https://www.facebook.com/ESFOT-EPN-UIO-163137570522102/"
+                  href="https://api.whatsapp.com/send?phone=593959504842&text=Hola!%20%0AGracias%20por%20comunicarte%20con%20Muebles%20Maldonado%2C%20pronto%20un%20asesor%20canalizara%20%20t%C3%BA%20solicitud.%20"
                   target="_blank"
                 >
                   <WhatsAppIcon color="green" />
                 </IconImage>
                 <IconImage
-                  href="https://www.facebook.com/ESFOT-EPN-UIO-163137570522102/"
+                  href="https://www.pinterest.com/mueblesmaldonadoec"
                   target="_blank"
                 >
                   <PinterestIcon color="red" />

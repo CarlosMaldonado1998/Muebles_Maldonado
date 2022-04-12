@@ -8,10 +8,10 @@ const theme = createTheme({
       main: "#E09329",
     },
     secondary: {
-      main: "#19857b",
+      main: "#502a17",
     },
     terciary: {
-      main: "#116cd6",
+      main: "#9a5723",
     },
     error: {
       main: red.A400,
@@ -29,6 +29,7 @@ const theme = createTheme({
       main: "#833AB4",
     },
     white: "#fff",
+    brown: "#9a5723",
   },
   typography: {
     fontFamily: ['"Helvetica Neue"'].join(","),

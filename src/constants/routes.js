@@ -2,7 +2,7 @@ const publicRoutes = {
     HOME: "/",
     ABOUT: "acerca-de",
     CONTACT: "contacto",
-    PRODUCTS : "catalogo",
+    PRODUCTS : "productos",
     SHIPMENT: "envios",
     SERVICES: "servicios",
     LOGIN: "iniciar-sesion",

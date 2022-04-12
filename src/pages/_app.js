@@ -9,6 +9,8 @@ import theme from "../styles/theme";
 import createEmotionCache from "../styles/createEmotionCache";
 import { SnackbarProvider } from "notistack";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
+
 // Client-side cache shared for the whole session
 // of the user in the browser.
 
@@ -28,9 +30,8 @@ export default function MyApp(props) {
             {/* CssBaseline kickstart an elegant,
 				consistent, and simple baseline to
 				build upon. */}
-
             <CssBaseline />
-
+            <Navigation />
             <Component {...pageProps} />
             <Footer />
           </ThemeProvider>
