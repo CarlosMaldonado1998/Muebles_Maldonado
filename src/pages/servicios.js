@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "@/styles/Home.module.css";
 import Head from "next/head";
-
+import WhatsappButton from "@/components/WhatsappButton";
 
 const Services = () => {
   return (
@@ -15,6 +15,7 @@ const Services = () => {
           <h1 className={styles.title}>Muebles Maldonado</h1>
           <p className={styles.description}>Servicios realizados</p>
         </main>
+        <WhatsappButton message={"Hola! "} />
       </div>
     </>
   );

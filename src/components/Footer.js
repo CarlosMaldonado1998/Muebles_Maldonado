@@ -19,10 +19,6 @@ import Image from "next/image";
 
 const AboutUs = [
   {
-    text: "Nosotros",
-    to: Routes.ABOUT,
-  },
-  {
     text: "Servicios",
     to: Routes.SERVICES,
   },
@@ -64,7 +60,11 @@ const Footer = () => {
           >
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <Grid container justifyContent="center">
-                <Image src={LOGO} width={140} height={110} />
+                <Link href={Routes.HOME} passHref>
+                  <ButtonBase>
+                    <Image src={LOGO} width={140} height={110} />
+                  </ButtonBase>
+                </Link>
               </Grid>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
@@ -79,7 +79,7 @@ const Footer = () => {
                 columns={{ xs: 4, sm: 8, md: 8 }}
               >
                 {AboutUs.map((index) => (
-                   <Grid item xs={4} sm={8} md={12} key={`about-${index.text}`}>
+                  <Grid item xs={4} sm={8} md={12} key={`about-${index.text}`}>
                     <Link href={index.to} passHref>
                       <MuiLink underline="hover" color="white">
                         {index.text}
@@ -101,7 +101,13 @@ const Footer = () => {
                 columns={{ xs: 4, sm: 8, md: 12 }}
               >
                 {Products.map((index) => (
-                  <Grid item xs={4} sm={8} md={12} key={`products-${index.text}`}>
+                  <Grid
+                    item
+                    xs={4}
+                    sm={8}
+                    md={12}
+                    key={`products-${index.text}`}
+                  >
                     <Link href={index.to} passHref>
                       <MuiLink underline="hover" color="white">
                         {index.text}

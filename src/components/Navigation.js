@@ -13,6 +13,7 @@ import {
   Grid,
   Drawer,
   Link as MuiLink,
+  ButtonBase,
 } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -20,6 +21,8 @@ import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import NavItems from "./NavItems";
 import LOGO from "../../public/Recurso1.png";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+
 const drawerWidth = 240;
 
 const itemsNavigation = [
@@ -36,10 +39,6 @@ const itemsNavigation = [
     to: Routes.SHIPMENT,
   },
   {
-    text: "Nosotros",
-    to: Routes.ABOUT,
-  },
-  {
     text: "Servicios",
     to: Routes.SERVICES,
   },
@@ -48,6 +47,9 @@ const itemsNavigation = [
     to: Routes.CONTACT,
   },
 ];
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -76,7 +78,7 @@ const Navigation = (props) => {
     <>
       <ElevationScroll {...props}>
         <AppBar position="sticky" className={styles.navbar}>
-          <Container maxWidth="lg">
+          <Container maxWidth="xl">
             <Toolbar>
               {/**Cuando esta mediano o pequeño desaparece el boton de abrir **/}
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -98,7 +100,11 @@ const Navigation = (props) => {
               >
                 <Grid>
                   <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                    <Image src={LOGO} width={95} height={75} />
+                    <Link href={Routes.HOME} passHref>
+                      <ButtonBase>
+                        <Image src={LOGO} width={95} height={75} />
+                      </ButtonBase>
+                    </Link>
                   </Box>
                 </Grid>
                 <Grid>
@@ -111,9 +117,11 @@ const Navigation = (props) => {
                   >
                     {itemsNavigation.map((page) => (
                       <Link href={page.to} passHref key={`nav-${page.text}`}>
-                        <Button size={"large"} color="secondary">
-                          {page.text}
-                        </Button>
+                        <ButtonBase>
+                          <Typography mr={3} color="secondary" variant="h5">
+                            {page.text}
+                          </Typography>
+                        </ButtonBase>
                       </Link>
                     ))}
                   </Box>

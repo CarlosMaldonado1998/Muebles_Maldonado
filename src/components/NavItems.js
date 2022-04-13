@@ -42,11 +42,6 @@ const itemsNavigation = [
     icon: <LocalShippingIcon color="primary" />,
   },
   {
-    text: "Nosotros",
-    to: Routes.ABOUT,
-    icon: <BusinessIcon color="primary" />,
-  },
-  {
     text: "Servicios",
     to: Routes.SERVICES,
     icon: <WorkIcon color="primary" />,
