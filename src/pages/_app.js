@@ -33,6 +33,7 @@ export default function MyApp(props) {
             <CssBaseline />
             <Navigation />
             <Component {...pageProps} />
+            
             <Footer />
           </ThemeProvider>
         </AuthProvider>

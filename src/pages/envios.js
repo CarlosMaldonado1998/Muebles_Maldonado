@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 import React from "react";
 import styles from '@/styles/Home.module.css';
 import Head from 'next/head';
-
+import WhatsappButton from '@/components/WhatsappButton';
 const Shipment = () => {
   return (
     <>
@@ -15,6 +15,7 @@ const Shipment = () => {
           <h1 className={styles.title}>Muebles Maldonado</h1>
           <p className={styles.description}>Descripción proceso de envios</p>
         </main>
+        <WhatsappButton message={"Hola! "} />
       </div>
     </>
   );
