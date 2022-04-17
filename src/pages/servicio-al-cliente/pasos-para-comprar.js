@@ -34,17 +34,12 @@ const customStyle = {
 
 const stepsToBuy = () => {
   const breadcrumbs = [
-    <Link href={Routes.CUSTOMERSERVICE}>
-      <MuiLink
-        underline="hover"
-        key="2"
-        color="secondary"
-        href="/servicio-al-cliente"
-      >
+    <Link href={Routes.CUSTOMERSERVICE} key="pasos para comprar">
+      <MuiLink underline="hover" color="secondary" href="/servicio-al-cliente">
         Servicios
       </MuiLink>
     </Link>,
-    <Typography>Pasos para comprar</Typography>,
+    <Typography key="Text-pasos">Pasos para comprar</Typography>,
   ];
 
   return (

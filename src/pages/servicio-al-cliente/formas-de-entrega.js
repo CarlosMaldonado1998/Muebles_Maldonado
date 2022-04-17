@@ -37,17 +37,12 @@ const customStyle = {
 
 const DeliveryMethod = () => {
   const breadcrumbs = [
-    <Link href={Routes.CUSTOMERSERVICE}>
-      <MuiLink
-        underline="hover"
-        key="formas de entrega"
-        color="secondary"
-        href="/servicio-al-cliente"
-      >
+    <Link href={Routes.CUSTOMERSERVICE} key="formas de entrega">
+      <MuiLink underline="hover" color="secondary" href="/servicio-al-cliente">
         Servicios
       </MuiLink>
     </Link>,
-    <Typography>Formas de entrega</Typography>,
+    <Typography key="Text-formas">Formas de entrega</Typography>,
   ];
   return (
     <>
