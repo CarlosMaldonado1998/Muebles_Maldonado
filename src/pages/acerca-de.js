@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import Button from '@mui/material/Button';
 import styles from '@/styles/Home.module.css';
 import WhatsappButton from "@/components/WhatsappButton";
-import Head from 'next/head';
+import Header from "@/components/Header";
 const About = () => {
   return (
     <>
