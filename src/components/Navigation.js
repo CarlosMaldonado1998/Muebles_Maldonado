@@ -35,12 +35,12 @@ const itemsNavigation = [
     to: Routes.PRODUCTS,
   },
   {
-    text: "Envíos",
-    to: Routes.SHIPMENT,
+    text: "Galería",
+    to: Routes.GALLERY,
   },
   {
     text: "Servicios",
-    to: Routes.SERVICES,
+    to: Routes.CUSTOMERSERVICE,
   },
   {
     text: "Contáctanos",
@@ -57,8 +57,8 @@ function ElevationScroll(props) {
   return React.cloneElement(children, {
     elevation: 4,
     style: {
-      backgroundColor: "rgba(206, 150, 30, 0.95)",
-      color: "rgba(206, 150, 30, 0.95)",
+      backgroundColor: "rgba(232, 191, 86, 0.95)",
+      color: "rgba(232, 191, 86, 0.95)",
     },
   });
 }
