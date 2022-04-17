@@ -23,6 +23,7 @@ import Tramaco from '@/public/Tramaco.png';
 import Encomienda from "@/public/encomienda.png";
 import Servientrega from "@/public/CentrosS.png";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Header from '@/components/Header';
 
 const customStyle = {
   Container: {
@@ -37,7 +38,7 @@ const customStyle = {
 
 const DeliveryMethod = () => {
   const breadcrumbs = [
-    <Link href={Routes.CUSTOMERSERVICE} key="formas de entrega">
+    <Link href={Routes.CUSTOMERSERVICE} key="formas de entrega" passHref>
       <MuiLink underline="hover" color="secondary" href="/servicio-al-cliente">
         Servicios
       </MuiLink>
@@ -46,16 +47,13 @@ const DeliveryMethod = () => {
   ];
   return (
     <>
-      <Head>
-        <title>Muebles Maldonado-Envios</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header title={"Formas de entrega"}/>
       <div className={styles.fondo}>
         <Container style={customStyle.Container}>
           <Stack p={1}>
             <Breadcrumbs
               separator={
-                <NavigateNextIcon fontSize="small" color="secondary"/>
+                <NavigateNextIcon fontSize="small" color="secondary" />
               }
             >
               {breadcrumbs}
@@ -185,13 +183,23 @@ const DeliveryMethod = () => {
               <Grid ml={2}></Grid>
             </Grid>
             <Grid item xs={12} sm={12} md={4}>
-              <Image src={Servientrega} width={250} height={200} />
+              <Image
+                src={Servientrega}
+                alt="Servientrega"
+                width={250}
+                height={200}
+              />
             </Grid>
             <Grid item xs={12} sm={12} md={4}>
-              <Image src={Tramaco} width={300} height={150} />
+              <Image src={Tramaco} alt="Tramaco" width={300} height={150} />
             </Grid>
             <Grid item xs={12} sm={12} md={4}>
-              <Image src={Encomienda} width={250} height={200} />
+              <Image
+                src={Encomienda}
+                alt="Camión de encomienda"
+                width={250}
+                height={200}
+              />
             </Grid>
           </Grid>
         </Container>

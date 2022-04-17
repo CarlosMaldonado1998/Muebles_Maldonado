@@ -80,7 +80,7 @@ const NavItems = ({ onHandleDrawerClose }) => {
       <Divider />
       <List>
         {itemsNavigation.map((text, index) => (
-          <Link href={text.to} key={`nav-item-${text.text}`}>
+          <Link href={text.to} key={`nav-item-${text.text}`} passHref>
             <ListItem button onClick={onHandleDrawerClose}>
               <ListItemIcon>{text.icon}</ListItemIcon>
               <ListItemText

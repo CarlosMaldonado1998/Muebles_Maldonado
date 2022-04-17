@@ -16,10 +16,11 @@ import {
   Stack,
 } from "@mui/material";
 import Image from "next/image";
-import DeliveryInfo from "@/public/choice.svg";
-import Factory from "@/public/transfer.svg";
+import Choice from "@/public/choice.svg";
+import transferencia from "@/public/transfer.svg";
 import Bank from "@/public/bancoPichincha.png";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Header from "@/components/Header";
 
 const customStyle = {
   Container: {
@@ -34,7 +35,7 @@ const customStyle = {
 
 const stepsToBuy = () => {
   const breadcrumbs = [
-    <Link href={Routes.CUSTOMERSERVICE} key="pasos para comprar">
+    <Link href={Routes.CUSTOMERSERVICE} key="pasos para comprar" passHref>
       <MuiLink underline="hover" color="secondary" href="/servicio-al-cliente">
         Servicios
       </MuiLink>
@@ -44,10 +45,7 @@ const stepsToBuy = () => {
 
   return (
     <>
-      <Head>
-        <title>Muebles Maldonado-Servicios</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header title={"Pasos para comprar"}/>
       <div className={styles.fondo}>
         <Container style={customStyle.Container}>
           <Stack p={1}>
@@ -140,14 +138,14 @@ const stepsToBuy = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <Image
-                src={DeliveryInfo}
-                alt="Primer paso"
+                src= {Choice}
+                alt="Elección"
                 width={200}
                 height={200}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-              <Image src={Factory} alt="Primer paso" width={250} height={200} />
+              <Image src={transferencia} alt="Transferencia" width={250} height={200} />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <Paper elevation={16} style={customStyle.Paper}>
@@ -156,7 +154,7 @@ const stepsToBuy = () => {
                   color="secondary"
                 />
                 <Grid m={1}>
-                  <Image src={Bank} width={70} height={15} />
+                  <Image src={Bank} alt="Banco Pichincha" width={70} height={15} />
                 </Grid>
 
                 <Typography textAlign={"left"}>

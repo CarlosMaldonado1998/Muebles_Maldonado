@@ -102,7 +102,7 @@ const Navigation = (props) => {
                   <Box sx={{ display: { xs: "none", md: "flex" } }}>
                     <Link href={Routes.HOME} passHref>
                       <ButtonBase>
-                        <Image src={LOGO} width={95} height={75} />
+                        <Image src={LOGO} alt="Muebles Maldonado" width={95} height={75} />
                       </ButtonBase>
                     </Link>
                   </Box>
@@ -131,7 +131,7 @@ const Navigation = (props) => {
               <Grid>
                 {/**Cuando esta pequeño Titulo**/}
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
-                  <Image src={LOGO} width={100} height={75} />
+                  <Image src={LOGO} alt="Muebles Maldonado" width={100} height={75} />
                 </Box>
               </Grid>
               {/**Cuando esta grande Titulo**/}

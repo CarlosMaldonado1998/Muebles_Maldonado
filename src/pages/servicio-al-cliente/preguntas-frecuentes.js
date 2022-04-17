@@ -16,10 +16,11 @@ import {
   Link as MuiLink,
 } from "@mui/material";
 import Image from "next/image";
-import Service from "@/public/questions.svg";
+import Question from "@/public/questions.svg";
 import Routes from "@/constants/routes";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Header from "@/components/Header";
 
 const customStyle = {
   Container: {
@@ -34,7 +35,7 @@ const customStyle = {
 
 const Questions = () => {
   const breadcrumbs = [
-    <Link href={Routes.CUSTOMERSERVICE} key="preguntas frecuentes">
+    <Link href={Routes.CUSTOMERSERVICE} key="preguntas frecuentes" passHref>
       <MuiLink underline="hover" color="secondary" href="/servicio-al-cliente">
         Servicios
       </MuiLink>
@@ -43,10 +44,7 @@ const Questions = () => {
   ];
   return (
     <>
-      <Head>
-        <title>Muebles Maldonado-Envios</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+     <Header title={"Preguntas frecuentes"}/>
       <div className={styles.fondo}>
         <Container style={customStyle.Container}>
           <Stack p={1}>
@@ -70,12 +68,9 @@ const Questions = () => {
           >
             <Grid item xs={12} sm={12} md={12}>
               <Typography textAlign={"justify"}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                eget.
               </Typography>
             </Grid>
 
@@ -140,7 +135,7 @@ const Questions = () => {
               </Accordion>
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-              <Image src={Service} alt="Primer paso" width={350} height={350} />
+              <Image src={Question} alt="Preguntas" width={350} height={350} />
             </Grid>
           </Grid>
 

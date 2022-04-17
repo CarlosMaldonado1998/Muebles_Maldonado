@@ -70,7 +70,7 @@ const Footer = () => {
               <Grid container justifyContent="center">
                 <Link href={Routes.HOME} passHref>
                   <ButtonBase>
-                    <Image src={LOGO} width={140} height={110} />
+                    <Image src={LOGO} alt="Muebles Maldonado" width={140} height={110} />
                   </ButtonBase>
                 </Link>
               </Grid>

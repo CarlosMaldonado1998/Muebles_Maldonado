@@ -4,6 +4,7 @@ import Head from "next/head";
 import WhatsappButton from "@/components/WhatsappButton";
 import useSWR from "swr";
 import { fetcher } from "@/lib/utils";
+import Header from '@/components/Header';
 const index = () => {
 
   // const { data, error } = useSWR("/products/room/1", fetcher);
@@ -16,10 +17,7 @@ const index = () => {
   return (
     <>
       <div className={styles.container}>
-        <Head>
-          <title>Productos</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <Header title={"Productos"}/>
         <main className={styles.main}>
           <h1 className={styles.title}>Muebles Maldonado</h1>
           <p className={styles.description}>Listado de productos</p>

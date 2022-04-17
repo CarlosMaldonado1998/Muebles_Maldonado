@@ -8,10 +8,7 @@ const About = () => {
   return (
     <>
       <div className={styles.container}>
-        <Head>
-          <title>Muebles Maldonado-Acerca de</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <Header title={"Acerca de"} />
         <main className={styles.main}>
           <h1 className={styles.title}>Muebles Maldonado</h1>
           <p className={styles.description}>Información del negocio</p>

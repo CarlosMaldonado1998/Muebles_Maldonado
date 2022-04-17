@@ -16,6 +16,7 @@ import {
 import Image from "next/image";
 import DeliveryInfo from "@/public/personalization.svg";
 import Service from "@/public/services.svg";
+import Header from "@/components/Header";
 
 const customStyle = {
   Container: {
@@ -31,10 +32,7 @@ const customStyle = {
 const index = () => {
   return (
     <>
-      <Head>
-        <title>Muebles Maldonado-Envios</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header title={"Servicios"}/>
       <div className={styles.fondo}>
         <Container style={customStyle.Container}>
           <Typography p={3} variant="h4" color="secondary">
@@ -48,16 +46,9 @@ const index = () => {
           >
             <Grid item xs={12} sm={12} md={12}>
               <Typography textAlign={"justify"}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                eget.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
@@ -67,13 +58,9 @@ const index = () => {
                   color="secondary"
                 />
                 <Typography textAlign={"justify"}>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                  eget.
                 </Typography>
               </Paper>
             </Grid>
@@ -116,7 +103,7 @@ const index = () => {
                 </Link>
                 <Divider />
                 <Link href={Routes.QUESTIONS} passHref>
-                  <MuiLink underline="hover"  color="secondary">
+                  <MuiLink underline="hover" color="secondary">
                     <Typography m={1} variant={"h6"} textAlign={"justify"}>
                       Preguntas Frecuentes
                     </Typography>
