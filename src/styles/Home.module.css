@@ -16,6 +16,14 @@
   justify-content: center;
   align-items: center;
 }
+
+.fondo {
+   /* background: linear-gradient(0deg, rgb(235, 254, 168) 0%, rgb(109, 179, 155) 100%);
+    */
+    background: linear-gradient(0deg, rgb(252, 235, 182) 0%, rgb(120, 192, 168) 100%);
+    min-height: 80vh;
+    
+}
 .navbar {
   height: 11vh;
   width: 100%;
@@ -128,6 +136,9 @@
     height: 92vh;
     max-height: 92vh;
   }
+  .fondo {
+    min-height: 92vh;
+  }
   .footer {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(68, 68, 66, 0.9)),
       url(/footer-movil.jpg) no-repeat;
@@ -147,6 +158,9 @@
   .container {
     height: 90vh;
     max-height: 90vh;
+  }
+  .fondo {
+    min-height: 90vh;
   }
   .footer {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(68, 68, 66, 0.9)),

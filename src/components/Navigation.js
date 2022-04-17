@@ -35,12 +35,12 @@ const itemsNavigation = [
     to: Routes.PRODUCTS,
   },
   {
-    text: "Envíos",
-    to: Routes.SHIPMENT,
+    text: "Galería",
+    to: Routes.GALLERY,
   },
   {
     text: "Servicios",
-    to: Routes.SERVICES,
+    to: Routes.CUSTOMERSERVICE,
   },
   {
     text: "Contáctanos",
@@ -57,8 +57,8 @@ function ElevationScroll(props) {
   return React.cloneElement(children, {
     elevation: 4,
     style: {
-      backgroundColor: "rgba(206, 150, 30, 0.95)",
-      color: "rgba(206, 150, 30, 0.95)",
+      backgroundColor: "rgba(232, 191, 86, 0.95)",
+      color: "rgba(232, 191, 86, 0.95)",
     },
   });
 }
@@ -102,7 +102,7 @@ const Navigation = (props) => {
                   <Box sx={{ display: { xs: "none", md: "flex" } }}>
                     <Link href={Routes.HOME} passHref>
                       <ButtonBase>
-                        <Image src={LOGO} width={95} height={75} />
+                        <Image src={LOGO} alt="Muebles Maldonado" width={95} height={75} />
                       </ButtonBase>
                     </Link>
                   </Box>
@@ -131,7 +131,7 @@ const Navigation = (props) => {
               <Grid>
                 {/**Cuando esta pequeño Titulo**/}
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
-                  <Image src={LOGO} width={100} height={75} />
+                  <Image src={LOGO} alt="Muebles Maldonado" width={100} height={75} />
                 </Box>
               </Grid>
               {/**Cuando esta grande Titulo**/}

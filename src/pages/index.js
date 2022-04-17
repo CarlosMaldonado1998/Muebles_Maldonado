@@ -4,21 +4,14 @@ import NextLink from "next/link";
 import Link from "@mui/material/Link";
 import Navigation from "@/components/Navigation";
 import WhatsappButton from "@/components/WhatsappButton";
-import Box from "@mui/material/Box";
-import Fab from "@mui/material/Fab";
-import AddIcon from "@mui/icons-material/Add";
-import EditIcon from "@mui/icons-material/Edit";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import NavigationIcon from "@mui/icons-material/Navigation";
+
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <>
       <div className={styles.container}>
-        <Head>
-          <title>Muebles Maldonado</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <Header title={"Muebles Maldonado"}/>
 
         <main className={styles.main}>
           <h1 className={styles.title}>Muebles Maldonado</h1>

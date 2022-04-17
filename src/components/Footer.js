@@ -14,17 +14,25 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Link from "next/link";
 import styled from "@emotion/styled";
-import LOGO from '../../public/Recurso1.png';
+import LOGO from "../../public/Recurso1.png";
 import Image from "next/image";
 
 const AboutUs = [
   {
     text: "Servicios",
-    to: Routes.SERVICES,
+    to: Routes.CUSTOMERSERVICE,
   },
   {
-    text: "Contáctanos",
-    to: Routes.CONTACT,
+    text: "Pasos para comprar",
+    to: Routes.STEPSTOBUY,
+  },
+  {
+    text: "Formas de entrega",
+    to: Routes.DELIVERYMETHOD,
+  },
+  {
+    text: "Preguntas frecuentes",
+    to: Routes.QUESTIONS,
   },
 ];
 
@@ -34,8 +42,8 @@ const Products = [
     to: Routes.PRODUCTS,
   },
   {
-    text: "Envíos",
-    to: Routes.SHIPMENT,
+    text: "Galería",
+    to: Routes.GALLERY,
   },
 ];
 const IconImage = styled(ButtonBase)(({ theme }) => ({
@@ -62,7 +70,7 @@ const Footer = () => {
               <Grid container justifyContent="center">
                 <Link href={Routes.HOME} passHref>
                   <ButtonBase>
-                    <Image src={LOGO} width={140} height={110} />
+                    <Image src={LOGO} alt="Muebles Maldonado" width={140} height={110} />
                   </ButtonBase>
                 </Link>
               </Grid>
@@ -70,7 +78,7 @@ const Footer = () => {
             <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
               <Grid container justifyContent="center">
                 <Typography color="brown" variant="h6">
-                  Acerca de
+                  Atención al cliente
                 </Typography>
               </Grid>
               <Grid
@@ -78,15 +86,17 @@ const Footer = () => {
                 spacing={{ xs: 2, md: 3 }}
                 columns={{ xs: 4, sm: 8, md: 8 }}
               >
-                {AboutUs.map((index) => (
-                  <Grid item xs={4} sm={8} md={12} key={`about-${index.text}`}>
-                    <Link href={index.to} passHref>
-                      <MuiLink underline="hover" color="white">
-                        {index.text}
-                      </MuiLink>
-                    </Link>
-                  </Grid>
-                ))}
+                {AboutUs.map((item, index) => {
+                  return (
+                    <Grid item xs={4} sm={8} md={12} key={`about-${item.text}`}>
+                      <Link href={item.to} passHref>
+                        <MuiLink underline="hover" color="white">
+                          {item.text}
+                        </MuiLink>
+                      </Link>
+                    </Grid>
+                  );
+                })}
               </Grid>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>

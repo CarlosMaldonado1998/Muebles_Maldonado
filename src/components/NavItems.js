@@ -22,6 +22,7 @@ import ListIcon from "@mui/icons-material/List";
 import WorkIcon from "@mui/icons-material/Work";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import BusinessIcon from "@mui/icons-material/Business";
+import CollectionsIcon from "@mui/icons-material/Collections";
 import Routes from "@/constants/routes";
 import Link from "next/link";
 
@@ -37,13 +38,13 @@ const itemsNavigation = [
     icon: <ListIcon color="primary" />,
   },
   {
-    text: "Envíos",
-    to: Routes.SHIPMENT,
-    icon: <LocalShippingIcon color="primary" />,
+    text: "Galeria",
+    to: Routes.GALLERY,
+    icon: <CollectionsIcon color="primary" />,
   },
   {
     text: "Servicios",
-    to: Routes.SERVICES,
+    to: Routes.CUSTOMERSERVICE,
     icon: <WorkIcon color="primary" />,
   },
   {
@@ -79,7 +80,7 @@ const NavItems = ({ onHandleDrawerClose }) => {
       <Divider />
       <List>
         {itemsNavigation.map((text, index) => (
-          <Link href={text.to} key={`nav-item-${text.text}`}>
+          <Link href={text.to} key={`nav-item-${text.text}`} passHref>
             <ListItem button onClick={onHandleDrawerClose}>
               <ListItemIcon>{text.icon}</ListItemIcon>
               <ListItemText
