@@ -36,7 +36,7 @@ const customStyle = {
 const stepsToBuy = () => {
   const breadcrumbs = [
     <Link href={Routes.CUSTOMERSERVICE} key="pasos para comprar" passHref>
-      <MuiLink underline="hover" color="secondary" href="/servicio-al-cliente">
+      <MuiLink underline="hover" color="primary" href="/servicio-al-cliente">
         Servicios
       </MuiLink>
     </Link>,
@@ -45,20 +45,18 @@ const stepsToBuy = () => {
 
   return (
     <>
-      <Header title={"Pasos para comprar"}/>
+      <Header title={"Pasos para comprar"} />
       <div className={styles.fondo}>
         <Container style={customStyle.Container}>
           <Stack p={1}>
             <Breadcrumbs
-              separator={
-                <NavigateNextIcon fontSize="small" color="secondary" />
-              }
+              separator={<NavigateNextIcon fontSize="small" color="primary" />}
             >
               {breadcrumbs}
             </Breadcrumbs>
           </Stack>
 
-          <Typography p={1} variant="h4" color="secondary">
+          <Typography p={1} variant="h4" color="primary">
             Pasos para comprar
           </Typography>
 
@@ -69,12 +67,7 @@ const stepsToBuy = () => {
             alignItems="center"
           >
             <Grid item xs={12} sm={12} md={12}>
-              <Typography
-                p={1}
-                variant="h6"
-                color="secondary"
-                textAlign={"left"}
-              >
+              <Typography p={1} variant="h6" color="primary" textAlign={"left"}>
                 ¿Cómo comprar un Producto en Muebles Maldonado ?
               </Typography>
               <Typography textAlign={"justify"}>
@@ -87,12 +80,7 @@ const stepsToBuy = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12}>
-              <Typography
-                p={1}
-                variant="h6"
-                color="secondary"
-                textAlign={"left"}
-              >
+              <Typography p={1} variant="h6" color="primary" textAlign={"left"}>
                 ¿Porque comprar en Muebles Maldonado?
               </Typography>
               <Typography textAlign={"justify"}>
@@ -111,7 +99,7 @@ const stepsToBuy = () => {
           </Grid>
 
           <Divider />
-          <Typography p={3} variant="h5" color="secondary">
+          <Typography p={3} variant="h5" color="primary">
             Selecciona un Producto y Procede a Cancelar en cualquiera de las dos
             modalidades que ofrecemos.
           </Typography>
@@ -123,7 +111,7 @@ const stepsToBuy = () => {
           >
             <Grid item xs={12} sm={12} md={6}>
               <Paper elevation={16} style={customStyle.Paper}>
-                <Chip label="1.- Selecciona un Producto " color="secondary" />
+                <Chip label="1.- Selecciona un Producto " color="primary" />
                 <Typography textAlign={"left"}>
                   Una vez seleccionado el producto lo puede cancelar en dos
                   modalidades <br />
@@ -137,24 +125,29 @@ const stepsToBuy = () => {
               </Paper>
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-              <Image
-                src= {Choice}
-                alt="Elección"
-                width={200}
-                height={200}
-              />
+              <Image src={Choice} alt="Elección" width={200} height={200} />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-              <Image src={transferencia} alt="Transferencia" width={250} height={200} />
+              <Image
+                src={transferencia}
+                alt="Transferencia"
+                width={250}
+                height={200}
+              />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <Paper elevation={16} style={customStyle.Paper}>
                 <Chip
                   label="2.-  Forma de Pago  por Transferencia Bancaria o Deposito "
-                  color="secondary"
+                  color="primary"
                 />
                 <Grid m={1}>
-                  <Image src={Bank} alt="Banco Pichincha" width={70} height={15} />
+                  <Image
+                    src={Bank}
+                    alt="Banco Pichincha"
+                    width={70}
+                    height={15}
+                  />
                 </Grid>
 
                 <Typography textAlign={"left"}>

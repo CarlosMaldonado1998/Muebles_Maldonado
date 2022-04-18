@@ -36,7 +36,7 @@ const customStyle = {
 const Questions = () => {
   const breadcrumbs = [
     <Link href={Routes.CUSTOMERSERVICE} key="preguntas frecuentes" passHref>
-      <MuiLink underline="hover" color="secondary" href="/servicio-al-cliente">
+      <MuiLink underline="hover" color="primary" href="/servicio-al-cliente">
         Servicios
       </MuiLink>
     </Link>,
@@ -44,20 +44,18 @@ const Questions = () => {
   ];
   return (
     <>
-     <Header title={"Preguntas frecuentes"}/>
+      <Header title={"Preguntas frecuentes"} />
       <div className={styles.fondo}>
         <Container style={customStyle.Container}>
           <Stack p={1}>
             <Breadcrumbs
-              separator={
-                <NavigateNextIcon fontSize="small" color="secondary" />
-              }
+              separator={<NavigateNextIcon fontSize="small" color="primary" />}
             >
               {breadcrumbs}
             </Breadcrumbs>
           </Stack>
 
-          <Typography p={1} variant="h4" color="secondary">
+          <Typography p={1} variant="h4" color="primary">
             Preguntas Frecuentes
           </Typography>
           <Grid
@@ -77,11 +75,11 @@ const Questions = () => {
             <Grid item m={1} xs={12} sm={12} md={12}>
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon color="secondary" />}
+                  expandIcon={<ExpandMoreIcon color="primary" />}
                   aria-controls="question1-content"
                   id="question1-header"
                 >
-                  <Typography color="secondary" variant="h6">
+                  <Typography color="primary" variant="h6">
                     Pregunta 1
                   </Typography>
                 </AccordionSummary>
@@ -97,11 +95,11 @@ const Questions = () => {
             <Grid item m={1} xs={12} sm={12} md={12}>
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon color="secondary" />}
+                  expandIcon={<ExpandMoreIcon color="primary" />}
                   aria-controls="question3-content"
                   id="question3-header"
                 >
-                  <Typography color="secondary" variant="h6">
+                  <Typography color="primary" variant="h6">
                     Pregunta 2
                   </Typography>
                 </AccordionSummary>
@@ -117,11 +115,11 @@ const Questions = () => {
             <Grid item m={1} xs={12} sm={12} md={12}>
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon color="secondary" />}
+                  expandIcon={<ExpandMoreIcon color="primary" />}
                   aria-controls="question3-content"
                   id="question3-header"
                 >
-                  <Typography color="secondary" variant="h6">
+                  <Typography color="primary" variant="h6">
                     Pregunta 3
                   </Typography>
                 </AccordionSummary>

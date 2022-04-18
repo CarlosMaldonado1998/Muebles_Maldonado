@@ -21,7 +21,7 @@ import Delivered from "@/public/delivered.svg";
 import Factory from "@/public/factory.svg";
 import Tramaco from '@/public/Tramaco.png';
 import Encomienda from "@/public/encomienda.png";
-import Servientrega from "@/public/CentrosS.png";
+import Enetsa from "@/public/Enetsa.png";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Header from '@/components/Header';
 
@@ -39,7 +39,7 @@ const customStyle = {
 const DeliveryMethod = () => {
   const breadcrumbs = [
     <Link href={Routes.CUSTOMERSERVICE} key="formas de entrega" passHref>
-      <MuiLink underline="hover" color="secondary" href="/servicio-al-cliente">
+      <MuiLink underline="hover" color="primary" href="/servicio-al-cliente">
         Servicios
       </MuiLink>
     </Link>,
@@ -53,14 +53,14 @@ const DeliveryMethod = () => {
           <Stack p={1}>
             <Breadcrumbs
               separator={
-                <NavigateNextIcon fontSize="small" color="secondary" />
+                <NavigateNextIcon fontSize="small" color="primary" />
               }
             >
               {breadcrumbs}
             </Breadcrumbs>
           </Stack>
 
-          <Typography p={1} variant="h4" color="secondary">
+          <Typography p={1} variant="h4" color="primary">
             Formas de Entrega en Quito y Provincias
           </Typography>
           <Grid
@@ -89,8 +89,8 @@ const DeliveryMethod = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <Paper elevation={16} style={customStyle.Paper}>
-                <Chip label="1" color="secondary" />
-                <Typography>
+                <Chip label="1" color="primary" />
+                <Typography textAlign={"justify"}>
                   Cuando hagas tu pedido dá toda la información necesaria para
                   el buen desarrollo de la entrega: dirección, teléfonos. Da uno
                   o varios números de teléfono en los que estés localizable
@@ -106,16 +106,16 @@ const DeliveryMethod = () => {
                 src={DeliveryInfo}
                 alt="Primer paso"
                 width={200}
-                height={200}
+                height={250}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-              <Image src={Factory} alt="Primer paso" width={250} height={200} />
+              <Image src={Factory} alt="Primer paso" width={250} height={250} />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <Paper elevation={16} style={customStyle.Paper}>
-                <Chip label="2" color="secondary" />
-                <Typography>
+                <Chip label="2" color="primary" />
+                <Typography textAlign={"justify"}>
                   Recuerda Muebles Maldonado Fabrica Muebles Bajo Pedido y una
                   vez recibido la confirmación de su pago procedemos a elaborar
                   el mueble y entregamos en el plazo máximo de señalado a partir
@@ -126,8 +126,8 @@ const DeliveryMethod = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <Paper elevation={16} style={customStyle.Paper}>
-                <Chip label="3" color="secondary" />
-                <Typography>
+                <Chip label="3" color="primary" />
+                <Typography textAlign={"justify"}>
                   Nuestro transportista se pondrá en contacto para planificar la
                   entrega. La entrega se efectuará de Lunes a Sábado : De 8:00
                   am a 14:00 pm , De 15:00 pm a 17:00 pm se realizan los envíos
@@ -144,13 +144,13 @@ const DeliveryMethod = () => {
                 src={Delivered}
                 alt="Primer paso"
                 width={250}
-                height={250}
+                height={300}
               />
             </Grid>
           </Grid>
 
           <Divider />
-          <Typography p={3} variant="h4" color="secondary">
+          <Typography p={3} variant="h4" color="primary">
             Envíos a Provincia
           </Typography>
           <Grid
@@ -162,7 +162,7 @@ const DeliveryMethod = () => {
             <Grid item xs={12} sm={12} md={12}>
               <Paper elevation={4} style={customStyle.Paper}>
                 <Typography mb={1} textAlign={"justify"}>
-                  Para envíos a provincia enviamos por Servientrega y Tramaco, o
+                  Para envíos a provincia enviamos por Enetsa y Tramaco, o
                   transportes de encomiendas para muebles pequeños, tiempo
                   estimado de llegada 24 horas después del despacho en lugares
                   principales. El costo adicional por el envió corre a cargo del
@@ -184,10 +184,10 @@ const DeliveryMethod = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={4}>
               <Image
-                src={Servientrega}
-                alt="Servientrega"
-                width={250}
-                height={200}
+                src={Enetsa}
+                alt="Enetsa"
+                width={150}
+                height={150}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={4}>

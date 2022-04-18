@@ -1,5 +1,5 @@
 .container {
-  min-height: 89vh;
+  min-height: 90vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -18,16 +18,23 @@
 }
 
 .fondo {
-   /* background: linear-gradient(0deg, rgb(235, 254, 168) 0%, rgb(109, 179, 155) 100%);
-    */
-    background: linear-gradient(0deg, rgb(252, 235, 182) 0%, rgb(120, 192, 168) 100%);
-    min-height: 80vh;
-    
+  /* background: linear-gradient(0deg, rgb(252, 235, 182) 0%, rgb(120, 192, 168) 100%); */
+  background: rgba(255, 255, 255);
+  min-height: 80vh;
 }
 .navbar {
-  height: 11vh;
+  height: 10vh;
   width: 100%;
-  min-height: 80px;
+  min-height: 70px;
+}
+
+.logo {
+  width: 7rem;
+  height: 4.2rem;
+  min-height: 3rem;
+  min-width: 5rem;
+  max-width: 7rem;
+  max-height: 5rem;
 }
 .footer {
   width: 100%;
@@ -36,8 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(68, 68, 66, 0.9)),
-    url(/footer.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgb(31, 31, 31));
   background-size: cover;
 }
 
@@ -132,17 +138,25 @@
     height: 8vh;
     min-height: 8vh;
   }
+  .title {
+  font-size: 2rem;
+}
   .container {
     height: 92vh;
     max-height: 92vh;
   }
+  .description {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
   .fondo {
     min-height: 92vh;
   }
-  .footer {
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(68, 68, 66, 0.9)),
-      url(/footer-movil.jpg) no-repeat;
-    background-size: cover;
+  .logo {
+    width: 6rem;
+    height: 4rem;
+    max-height: 4rem;
   }
 }
 
@@ -152,8 +166,35 @@
     flex-direction: column;
   }
   .navbar {
+    height: 8vh;
+    min-height: 8vh;
+    max-height: 60px;
+  }
+  .container {
+    height: 92vh;
+    max-height: 92vh;
+  }
+  .fondo {
+    min-height: 92vh;
+  }
+  .title {
+  font-size: 2rem;
+}
+  .logo {
+    width: 4rem;
+    height: 3rem;
+    max-height: 3rem;
+  }
+}
+
+@media (min-width: 1940px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar {
     height: 10vh;
-    min-height: 10vh;
+    min-height: 110px;
   }
   .container {
     height: 90vh;
@@ -162,9 +203,9 @@
   .fondo {
     min-height: 90vh;
   }
-  .footer {
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(68, 68, 66, 0.9)),
-      url(/footer-movil.jpg) no-repeat;
-    background-size: cover;
+  .logo {
+    width: 10rem;
+    height: 7rem;
+    max-height: 7rem;
   }
 }

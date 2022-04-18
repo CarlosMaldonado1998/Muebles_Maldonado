@@ -35,7 +35,7 @@ const index = () => {
       <Header title={"Servicios"}/>
       <div className={styles.fondo}>
         <Container style={customStyle.Container}>
-          <Typography p={3} variant="h4" color="secondary">
+          <Typography p={3} variant="h4" color="primary">
             Servicios
           </Typography>
           <Grid
@@ -55,7 +55,7 @@ const index = () => {
               <Paper elevation={16} style={customStyle.Paper}>
                 <Chip
                   label="Fabricación de muebles a medida"
-                  color="secondary"
+                  color="primary"
                 />
                 <Typography textAlign={"justify"}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -75,7 +75,7 @@ const index = () => {
           </Grid>
 
           <Divider />
-          <Typography p={3} variant="h4" color="secondary">
+          <Typography p={3} variant="h4" color="primary">
             Servicio al cliente
           </Typography>
           <Grid
@@ -87,7 +87,7 @@ const index = () => {
             <Grid item xs={12} sm={12} md={12}>
               <Paper elevation={4} style={customStyle.Paper}>
                 <Link href={Routes.STEPSTOBUY} passHref>
-                  <MuiLink underline="hover" color="secondary">
+                  <MuiLink underline="hover" color="primary">
                     <Typography m={1} variant={"h6"} textAlign={"justify"}>
                       Pasos para Comprar
                     </Typography>
@@ -95,7 +95,7 @@ const index = () => {
                 </Link>
                 <Divider />
                 <Link href={Routes.DELIVERYMETHOD} passHref>
-                  <MuiLink underline="hover" color="secondary">
+                  <MuiLink underline="hover" color="primary">
                     <Typography m={1} variant={"h6"} textAlign={"justify"}>
                       Formas de Entrega
                     </Typography>
@@ -103,7 +103,7 @@ const index = () => {
                 </Link>
                 <Divider />
                 <Link href={Routes.QUESTIONS} passHref>
-                  <MuiLink underline="hover" color="secondary">
+                  <MuiLink underline="hover" color="primary">
                     <Typography m={1} variant={"h6"} textAlign={"justify"}>
                       Preguntas Frecuentes
                     </Typography>

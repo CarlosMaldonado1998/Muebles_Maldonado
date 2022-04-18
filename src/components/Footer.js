@@ -1,13 +1,7 @@
 import React from "react";
 import styles from "@/styles/Home.module.css";
 import Routes from "@/constants/routes";
-import {
-  ButtonBase,
-  Grid,
-  Typography,
-  Link as MuiLink,
-  Container,
-} from "@mui/material";
+import { ButtonBase, Grid, Typography, Container } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
@@ -17,35 +11,33 @@ import styled from "@emotion/styled";
 import LOGO from "../../public/Recurso1.png";
 import Image from "next/image";
 
-const AboutUs = [
+const Contact = [
   {
-    text: "Servicios",
-    to: Routes.CUSTOMERSERVICE,
+    text: "Condado Alto  Sector Pisulli  Calle  Flavio Alfaro N81-156 y Alcabala.",
   },
   {
-    text: "Pasos para comprar",
-    to: Routes.STEPSTOBUY,
+    text: "Telf:  0959504842 ",
   },
   {
-    text: "Formas de entrega",
-    to: Routes.DELIVERYMETHOD,
+    text: "Correo: muebleriamaldonadoec@gmail.com",
   },
   {
-    text: "Preguntas frecuentes",
-    to: Routes.QUESTIONS,
+    text: "Quito - Ecuador",
   },
 ];
 
-const Products = [
+const Services = [
   {
-    text: "Catálogo",
-    to: Routes.PRODUCTS,
+    text: "Fabricación Muebles para el Hogar y Oficina.",
   },
   {
-    text: "Galería",
-    to: Routes.GALLERY,
+    text: "Relacado de Pisos, Puertas, y muebles en general.",
+  },
+  {
+    text: "Personalización muebles a medida.",
   },
 ];
+
 const IconImage = styled(ButtonBase)(({ theme }) => ({
   margin: "10px",
   "&:hover ": {
@@ -61,24 +53,39 @@ const Footer = () => {
           <Grid
             container
             direction="row"
-            justifyContent="center"
+            justifyContent="flex-start"
             alignItems="flex-start"
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-              <Grid container justifyContent="center">
+            <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
                 <Link href={Routes.HOME} passHref>
                   <ButtonBase>
-                    <Image src={LOGO} alt="Muebles Maldonado" width={140} height={110} />
+                    <Image
+                      src={LOGO}
+                      alt="Muebles Maldonado"
+                      width={170}
+                      height={120}
+                    />
                   </ButtonBase>
                 </Link>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-              <Grid container justifyContent="center">
-                <Typography color="brown" variant="h6">
-                  Atención al cliente
+            <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+              <Grid
+                container
+                direction="row"
+                justifyContent="flex-start"
+                alignItems="center"
+              >
+                <Typography p={1} color="white" variant="h6">
+                  CONTACTO
                 </Typography>
               </Grid>
               <Grid
@@ -86,23 +93,30 @@ const Footer = () => {
                 spacing={{ xs: 2, md: 3 }}
                 columns={{ xs: 4, sm: 8, md: 8 }}
               >
-                {AboutUs.map((item, index) => {
-                  return (
-                    <Grid item xs={4} sm={8} md={12} key={`about-${item.text}`}>
-                      <Link href={item.to} passHref>
-                        <MuiLink underline="hover" color="white">
-                          {item.text}
-                        </MuiLink>
-                      </Link>
-                    </Grid>
-                  );
-                })}
+                <Grid item xs={4} sm={8} md={12}>
+                  {Contact.map((item, index) => {
+                    return (
+                      <Typography
+                        variant="body2"
+                        color="white"
+                        key={`products-${item.text}`}
+                      >
+                        {item.text}
+                      </Typography>
+                    );
+                  })}
+                </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-              <Grid container justifyContent="center">
-                <Typography color="brown" variant="h6">
-                  Productos
+            <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+              <Grid
+                container
+                direction="row"
+                justifyContent="flex-start"
+                alignItems="center"
+              >
+                <Typography p={1} color="white" variant="h6">
+                  SERVICIOS
                 </Typography>
               </Grid>
               <Grid
@@ -110,59 +124,55 @@ const Footer = () => {
                 spacing={{ xs: 2, md: 3 }}
                 columns={{ xs: 4, sm: 8, md: 12 }}
               >
-                {Products.map((index) => (
-                  <Grid
-                    item
-                    xs={4}
-                    sm={8}
-                    md={12}
-                    key={`products-${index.text}`}
-                  >
-                    <Link href={index.to} passHref>
-                      <MuiLink underline="hover" color="white">
-                        {index.text}
-                      </MuiLink>
-                    </Link>
-                  </Grid>
-                ))}
+                <Grid item xs={4} sm={8} md={12}>
+                  {Services.map((index) => (
+                    <Typography
+                      variant="body2"
+                      color="white"
+                      key={`services-${index.text}`}
+                    >
+                      {index.text}
+                    </Typography>
+                  ))}
+                </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-              <Grid container justifyContent="center">
-                <Typography color="brown" variant="h6">
-                  Redes Sociales
-                </Typography>
-              </Grid>
-
+            <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
               <Grid
                 container
                 direction="row"
-                justifyContent="center"
-                alignItems="flex-start"
+                justifyContent="flex-start"
+                alignItems="center"
               >
+                <Typography p={1} color="white" variant="h6">
+                  REDES SOCIALES
+                </Typography>
+              </Grid>
+
+              <Grid container>
                 <IconImage
                   href="https://www.facebook.com/MueblesMaldonad"
                   target="_blank"
                 >
-                  <FacebookIcon color="blue" />
+                  <FacebookIcon color="whiteT" />
                 </IconImage>
                 <IconImage
                   href="https://www.instagram.com/muebles_maldonad/"
                   target="_blank"
                 >
-                  <InstagramIcon color="purple" />
+                  <InstagramIcon color="whiteT" />
                 </IconImage>
                 <IconImage
                   href="https://api.whatsapp.com/send?phone=593959504842&text=Hola!%20%0AGracias%20por%20comunicarte%20con%20Muebles%20Maldonado%2C%20pronto%20un%20asesor%20canalizara%20%20t%C3%BA%20solicitud.%20"
                   target="_blank"
                 >
-                  <WhatsAppIcon color="green" />
+                  <WhatsAppIcon color="whiteT" />
                 </IconImage>
                 <IconImage
                   href="https://www.pinterest.com/mueblesmaldonadoec"
                   target="_blank"
                 >
-                  <PinterestIcon color="red" />
+                  <PinterestIcon color="whiteT" />
                 </IconImage>
               </Grid>
             </Grid>
