@@ -139,16 +139,16 @@
     min-height: 8vh;
   }
   .title {
-  font-size: 2rem;
-}
+    font-size: 2rem;
+  }
   .container {
     height: 92vh;
     max-height: 92vh;
   }
   .description {
-  margin: 1rem 0;
-  font-size: 1rem;
-}
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
 
   .fondo {
     min-height: 92vh;
@@ -178,8 +178,8 @@
     min-height: 92vh;
   }
   .title {
-  font-size: 2rem;
-}
+    font-size: 2rem;
+  }
   .logo {
     width: 4rem;
     height: 3rem;
