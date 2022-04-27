@@ -1,0 +1,9 @@
+.swiper {
+  --swiper-theme-color: #502a17 !important;
+}
+
+.imgCarrousel {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+}

@@ -52,7 +52,7 @@ const index = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-              <Paper elevation={16} style={customStyle.Paper}>
+              <Paper elevation={8} style={customStyle.Paper}>
                 <Chip
                   label="Fabricación de muebles a medida"
                   color="primary"

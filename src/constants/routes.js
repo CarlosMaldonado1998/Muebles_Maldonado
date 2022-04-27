@@ -1,7 +1,7 @@
 const publicRoutes = {
   HOME: "/",
   ABOUT: "/acerca-de",
-  CONTACT: "/contacto",
+  CONTACT: "/#contacto",
   PRODUCTS: "/productos",
   GALLERY: "/galeria",
   CUSTOMERSERVICE: "/servicio-al-cliente",

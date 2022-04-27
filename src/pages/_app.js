@@ -21,7 +21,7 @@ export default function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <SnackbarProvider>
+      <SnackbarProvider maxSnack={3} preventDuplicate>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
@@ -33,7 +33,7 @@ export default function MyApp(props) {
             <CssBaseline />
             <Navigation />
             <Component {...pageProps} />
-            
+
             <Footer />
           </ThemeProvider>
         </AuthProvider>

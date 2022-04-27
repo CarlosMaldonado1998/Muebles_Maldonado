@@ -6,17 +6,18 @@ import Navigation from "@/components/Navigation";
 import WhatsappButton from "@/components/WhatsappButton";
 
 import Header from "@/components/Header";
+import Contact from "@/components/Contact";
+import Carrousel from "@/components/Carrousel";
 
 export default function Home() {
   return (
     <>
-      <div className={styles.container}>
-        <Header title={"Muebles Maldonado"}/>
-        <main className={styles.main}>
-          <h1 className={styles.title}>Muebles Maldonado</h1>
-          <p className={styles.description}>Carrousel de imagenes</p>
-          <WhatsappButton message={"Hola! "} />
-        </main>
+      <Carrousel />
+      <div className={styles.fondo}>
+        <Header title={"Muebles Maldonado"} />
+
+        <Contact />
+        <WhatsappButton message={"Mensaje"} />
       </div>
     </>
   );
