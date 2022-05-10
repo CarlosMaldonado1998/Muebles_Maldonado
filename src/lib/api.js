@@ -1,10 +1,12 @@
 
 //Configuracion Axios
 import axios from "axios";
+
+
 export default axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
-    withCredentials:true
-    });
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+  withCredentials: true
+});
 
 //api.interceptors.request.use(function (config){
   //  const token =localStorage.getItem('token');

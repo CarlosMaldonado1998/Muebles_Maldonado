@@ -20,7 +20,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import NavItems from "./NavItems";
-import LOGO from "../../public/Recurso1.png";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const drawerWidth = 240;
@@ -104,7 +103,7 @@ const Navigation = (props) => {
                       <ButtonBase>
                         <img
                           className={styles.logo}
-                          src="../Recurso1.png"
+                          src="../Logo_Maldonado.png"
                           alt="Muebles Maldonado"
                         />
                       </ButtonBase>
@@ -137,7 +136,7 @@ const Navigation = (props) => {
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
                   <img
                     className={styles.logo}
-                    src="../Recurso1.png"
+                    src="../Logo_Maldonado.png"
                     alt="Muebles Maldonado"
                   />
                 </Box>
