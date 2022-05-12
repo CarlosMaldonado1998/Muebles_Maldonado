@@ -1,7 +1,8 @@
 import React from "react";
 
 const ProductDetail = ({ product }) => {
-  console.log("productinfo", product);
+
+  if (!product) return "No se pudo cargar la información";
 
   return (
     <div>
@@ -17,7 +18,7 @@ const ProductDetail = ({ product }) => {
 };
 
 export default ProductDetail;
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/${params.productId}`
@@ -41,18 +42,20 @@ export async function getStaticProps({params}) {
 
 export async function getStaticPaths() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/products/all`);
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/all`
+    );
     const data = await res.json();
 
     const listProducts = data.data;
 
-    const paths = listProducts.map(({ id }) => ({
-      params: { productId: `${id}` },
-    }));
+    const paths = listProducts.map((product) => {
+      return { params: { productId: "" + product.id } };
+    });
 
     return {
       paths,
-      fallback: false,
+      fallback: true,
     };
   } catch (error) {
     console.log(error);

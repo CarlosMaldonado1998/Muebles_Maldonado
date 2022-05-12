@@ -1,7 +1,8 @@
 import React from "react";
 
 const ProductDetail = ({ listProducts }) => {
-  console.log("ProductosByCategory", listProducts);
+
+  if (!listProducts) return "No se pudo cargar la información";
 
   return (
     <div>
