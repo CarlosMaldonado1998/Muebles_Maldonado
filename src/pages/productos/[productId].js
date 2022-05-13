@@ -2,8 +2,6 @@ import React from "react";
 
 const ProductDetail = ({ product }) => {
 
-  if (!product) return "No se pudo cargar la información";
-
   return (
     <div>
       <p>{product.id}</p>
@@ -55,7 +53,7 @@ export async function getStaticPaths() {
 
     return {
       paths,
-      fallback: true,
+      fallback: false,
     };
   } catch (error) {
     console.log(error);

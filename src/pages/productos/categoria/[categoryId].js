@@ -2,8 +2,6 @@ import React from "react";
 
 const ProductDetail = ({ listProducts }) => {
 
-  if (!listProducts) return "No se pudo cargar la información";
-
   return (
     <div>
       {listProducts.data.map((product) => (
@@ -46,6 +44,6 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true, // See the "fallback" section below
+    fallback: false, // See the "fallback" section below
   };
 }
