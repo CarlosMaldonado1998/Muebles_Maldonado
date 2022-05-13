@@ -14,8 +14,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
-
 const MostPopular = () => {
   const { data, error } = useSWR("/products/latest", fetcher);
   if (error) return "An error has occurred.";
@@ -27,14 +25,19 @@ const MostPopular = () => {
     <div className={styles.fondo}>
       <Container>
         <Grid>
-          <Typography py={2} variant={"h5"} color="primary" textAlign={"left"}>
+          <Typography py={2} variant={"h4"} color="primary" textAlign={"left"}>
             Lo más vendido
           </Typography>
         </Grid>
-        <Grid p={2} sx={{display: "flex", minHeight: {xs: "40vh", sm: "35vh", lg: "40vh", xl: "25vh" }}}>
+        <Grid
+          p={2}
+          sx={{
+            display: "flex", 
+          }}
+        >
           <Swiper
             slidesPerView={1}
-            spaceBetween={25}
+            spaceBetween={20}
             pagination={{
               clickable: true,
             }}
@@ -45,20 +48,20 @@ const MostPopular = () => {
               },
               768: {
                 slidesPerView: 2,
-                spaceBetween: 40,
+                spaceBetween: 20,
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 50,
+                spaceBetween: 60,
               },
             }}
             modules={[Pagination, Navigation]}
             className={styles.swiper}
           >
-            <Grid container p={10}>
+            <Grid container>
               {data
                 ? data.data.map((product) => (
-                    <SwiperSlide key={product.name}>
+                    <SwiperSlide key={product.name} className={styles.Card}>
                       <CardProduct infoProduct={product} />
                     </SwiperSlide>
                   ))

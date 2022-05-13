@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import { Box, CardActionArea } from "@mui/material";
+import { Box, CardActionArea, CardHeader } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -23,34 +23,36 @@ const CardProduct = ({ infoProduct }) => {
       <Link href={`/productos/${infoProduct.id}`} passHref>
         <CardActionArea>
           <Card>
+            <CardHeader
+              title={infoProduct.name}
+              titleTypographyProps={{ color: "primary", variant: "h6" }}
+              // subheader="September 14, 2016"
+            />
             <Grid
               container
               direction="row"
-              justifyContent="space-around"
-              alignItems="stretch"
+              justifyContent="center"
+              alignItems="center"
             >
-              <CardContent>
-                <Typography variant="h6" color="primary">
-                  {infoProduct.name}
-                </Typography>
-                <Typography color="secondary">
-                  {infoProduct.material}
-                </Typography>
-                <Typography py={4}>$ {infoProduct.prices[0].value}</Typography>
-                <Button
-                  size="small"
-                  variant="contained"
-                  endIcon={<ChevronRightIcon />}
-                >
-                  Ver
-                </Button>
-              </CardContent>
-              <CardMedia
-                component="img"
-                sx={{ width: 180, padding: "10px" }}
-                image={imageUrl(infoProduct.images[0].url)}
-                alt={infoProduct.name}
-              />
+              <Grid>
+                <CardMedia
+                  component="img"
+                  sx={{ width: 180, padding: "10px" }}
+                  image={imageUrl(infoProduct.images[0].url)}
+                  alt={infoProduct.name}
+                />
+              </Grid>
+              <Grid item xs={12} md={12}>
+                <CardContent>
+                  <Typography
+                    textAlign={"center"}
+                    variant="h5"
+                    color="secondary"
+                  >
+                    $ {infoProduct.prices[0].value}
+                  </Typography>
+                </CardContent>
+              </Grid>
             </Grid>
           </Card>
         </CardActionArea>

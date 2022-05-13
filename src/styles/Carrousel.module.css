@@ -10,5 +10,10 @@
 
 .fondo {
   /* background: linear-gradient(0deg, rgb(252, 235, 182) 0%, rgb(120, 192, 168) 100%); */
-  background: rgba(240, 240, 240);
+  /* Beige #f5f5dc */
+  background: rgba(245, 245, 220);
+}
+
+.Card {
+  padding-bottom: 40px;
 }
