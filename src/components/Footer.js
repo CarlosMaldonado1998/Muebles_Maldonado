@@ -8,7 +8,7 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Link from "next/link";
 import styled from "@emotion/styled";
-import LOGO from "../../public/Recurso1.png";
+import LOGO from "../../public/Logo_Maldonado.png";
 import Image from "next/image";
 
 const Contact = [

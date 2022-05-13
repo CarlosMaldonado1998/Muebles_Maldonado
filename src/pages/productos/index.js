@@ -5,7 +5,7 @@ import WhatsappButton from "@/components/WhatsappButton";
 import useSWR from "swr";
 import { fetcher } from "@/lib/utils";
 import Header from '@/components/Header';
-const index = () => {
+export default function Home(){
 
   // const { data, error } = useSWR("/products/room/1", fetcher);
 
@@ -28,4 +28,3 @@ const index = () => {
   );
 }
 
-export default index

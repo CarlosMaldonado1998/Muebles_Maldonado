@@ -8,14 +8,19 @@ import WhatsappButton from "@/components/WhatsappButton";
 import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 import Carrousel from "@/components/Carrousel";
+import Categories from "@/components/Categories";
+import WhatsappImage from "@/components/WhatsappImage";
+import MostPopular from "@/components/Products/MostPopular";
 
 export default function Home() {
   return (
     <>
-      <Carrousel />
       <div className={styles.fondo}>
+        <Carrousel />
         <Header title={"Muebles Maldonado"} />
-
+        <Categories />
+        <MostPopular />
+        <WhatsappImage />
         <Contact />
         <WhatsappButton message={"Mensaje"} />
       </div>
