@@ -7,7 +7,8 @@ const customStyle = {
   Paper: {
     backgroundColor: "rgba(255,255,255)",
     margin: "10px",
-    borderRadius: "15px",
+    borderRadius: "20px",
+    overflow: "hidden"
   },
 };
 const phone = "593959504842";
