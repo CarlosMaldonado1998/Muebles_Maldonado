@@ -11,6 +11,7 @@ import Carrousel from "@/components/Carrousel";
 import Categories from "@/components/Categories";
 import WhatsappImage from "@/components/WhatsappImage";
 import MostPopular from "@/components/Products/MostPopular";
+import ProyectsDone from "@/components/Products/ProyectsDone";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Categories />
         <MostPopular />
         <WhatsappImage />
+        <ProyectsDone />
         <Contact />
         <WhatsappButton message={"Mensaje"} />
       </div>

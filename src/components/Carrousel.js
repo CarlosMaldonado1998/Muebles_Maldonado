@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from "@mui/material";
+import {  Grid } from "@mui/material";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
@@ -43,18 +43,6 @@ const ImagesList = [
   },
 ];
 
-const customStyle = {
-  Container: {
-    textAlign: "center",
-    minHeight: "50vh",
-    display: "flex",
-  },
-  Paper: {
-    backgroundColor: "rgba(255,255,255)",
-    margin: "10px",
-    padding: "10px",
-  },
-};
 const Carrousel = () => {
   return (
     <>
@@ -70,7 +58,7 @@ const Carrousel = () => {
           loop={true}
           autoplay={{
             delay: 3000,
-            disableOnInteraction: true,
+            disableOnInteraction: false,
           }}
           pagination={{
             dynamicBullets: true,

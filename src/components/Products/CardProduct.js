@@ -1,23 +1,19 @@
 import React from "react";
-import { useTheme } from "@mui/material/styles";
-import { Box, CardActionArea, CardHeader } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import SkipNextIcon from "@mui/icons-material/SkipNext";
-import { Grid } from "@mui/material";
+import {
+  Grid,
+  CardActionArea,
+  Card,
+  Paper,
+  CardHeader,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import imageUrl from "@/constants/imageUrl";
-import { Button, Paper } from "@mui/material";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Link from "next/link";
 
 const CardProduct = ({ infoProduct }) => {
-  const theme = useTheme();
-
+ 
   return (
     <Paper>
       <Link href={`/productos/${infoProduct.id}`} passHref>
@@ -26,7 +22,7 @@ const CardProduct = ({ infoProduct }) => {
             <CardHeader
               title={infoProduct.name}
               titleTypographyProps={{ color: "primary", variant: "h6" }}
-              // subheader="September 14, 2016"
+              // subheader={infoProduct.category_id}
             />
             <Grid
               container
@@ -37,7 +33,7 @@ const CardProduct = ({ infoProduct }) => {
               <Grid>
                 <CardMedia
                   component="img"
-                  sx={{ width: 180, padding: "10px" }}
+                  sx={{ width: 180 }}
                   image={imageUrl(infoProduct.images[0].url)}
                   alt={infoProduct.name}
                 />
