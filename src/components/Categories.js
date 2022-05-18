@@ -6,13 +6,12 @@ import { Container, Grid, Typography, ButtonBase } from "@mui/material";
 import Image from "next/image";
 import imageUrl from "@/constants/imageUrl";
 import Link from "next/link";
+import Loading from "./Loading";
 
 export default function Categories() {
   const { data, error } = useSWR("/rooms", fetcher);
   if (error) return "An error has occurred.";
-  if (!data) return "Loading...";
-
-  console.log("datos", data);
+  if (!data) return <Loading />;
 
   return (
     <>

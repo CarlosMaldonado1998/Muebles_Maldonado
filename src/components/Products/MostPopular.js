@@ -13,13 +13,12 @@ import styles from "@/styles/Carrousel.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Loading from "../Loading";
 
 const MostPopular = () => {
   const { data, error } = useSWR("/products/latest", fetcher);
   if (error) return "An error has occurred.";
-  if (!data) return "Loading...";
-
-  console.log("popular", data);
+  if (!data) return <Loading />;
 
   return (
     <div className={styles.fondo}>

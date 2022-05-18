@@ -1,0 +1,10 @@
+.delivery {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.deliveryShow {
+  height: 85vh !important;
+  object-fit: contain !important;
+}
