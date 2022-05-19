@@ -24,7 +24,7 @@ const WhatsappImage = () => {
         <Link href={`https://api.whatsapp.com/send?phone=${phone}`} passHref>
           <ButtonBase target="_blank">
             <Paper elevation={4} style={customStyle.Paper}>
-              <Image src={Whats} />
+              <Image src={Whats} alt="icono-Whatsapp"/>
             </Paper>
           </ButtonBase>
         </Link>

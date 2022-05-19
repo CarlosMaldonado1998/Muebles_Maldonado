@@ -75,7 +75,7 @@ const Carrousel = () => {
           >
             {ImagesList.map((item) => (
               <SwiperSlide key={item.info}>
-                <Image src={item.src} />
+                <Image src={item.src} alt={item.info}/>
               </SwiperSlide>
             ))}
           </Grid>
