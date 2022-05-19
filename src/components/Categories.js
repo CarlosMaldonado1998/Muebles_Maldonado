@@ -1,5 +1,4 @@
 import React from "react";
-import { SWRConfig } from "swr";
 import { fetcher } from "@/lib/utils";
 import useSWR from "swr";
 import { Container, Grid, Typography, ButtonBase } from "@mui/material";
@@ -37,13 +36,14 @@ export default function Categories() {
           >
             {data.data.map((categoryItem) => (
               <Grid key={categoryItem.name}>
-                <Link href={`/productos/categoria/${categoryItem.id}`}>
+                <Link href={`/productos/categoria/${categoryItem.id}`} passHref>
                   <ButtonBase>
                     <Grid>
                       <Image
                         src={imageUrl(categoryItem.url)}
                         height={100}
                         width={100}
+                        alt={categoryItem.name}
                       />
                       <Typography textAlign={"center"} color="primary">
                         {categoryItem.name}

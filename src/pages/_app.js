@@ -32,8 +32,6 @@ export default function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <SnackbarProvider maxSnack={3} preventDuplicate>
         <Head>
-          {/* Import CSS for nprogress */}
-          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
           <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
         <AuthProvider>

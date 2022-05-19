@@ -89,7 +89,7 @@ const ProyectsDone = () => {
           >
             {ImagesList.map((item) => (
               <SwiperSlide className={styles.Card} key={item.info}>
-                <Image src={item.src} />
+                <Image src={item.src} alt={item.info} />
               </SwiperSlide>
             ))}
           </Swiper>
