@@ -3,9 +3,9 @@
 }
 
 .imgCarrousel {
-    width: 100%;
-    min-width: 100%;
-    height: auto;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
 }
 
 .fondo {
@@ -16,4 +16,40 @@
 
 .Card {
   padding-bottom: 40px;
+}
+
+/* Carrousel de imagenes en página de producto */
+
+.productswipper {
+  --swiper-theme-color: #502a17 !important;
+  height: 75%;
+  width: 90%;
+}
+
+.productswiperSlide {
+  overflow: hidden;
+  position: relative;
+}
+.productswiperSlide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+}
+
+.productImageThumbsSlide {
+  width: 23% !important;
+  height: 24% !important;
+  cursor: pointer;
+  border: 1px solid #dddbdb;
+}
+
+.productImageThumbsSlide:active {
+  border-color: #73a061;
+}
+
+.productImageThumbsSlide img {
+  top: 0;
+  left: 0;
+  width: 100%;
 }
